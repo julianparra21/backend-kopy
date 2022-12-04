@@ -1,0 +1,83 @@
+body{
+  background-image: url(/img/fondo2.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+*{
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 90%;
+    padding:15px;
+}
+.formulario{
+    display:flex;
+   opacity: 0.5;
+    opacity: 10;
+    flex-direction: column;
+    text-align: center;
+    border-radius:5px ;
+    margin-top: 200px;
+    margin-left: 110px;
+    padding:3px;
+    max-width:100%;
+
+}
+h1{
+    text-align: center;
+    color:rgb(233, 104, 179);
+    font-size: 40px;
+}
+input[type="text"],
+input[type="password"]{
+    margin: 2px 0;
+    font-size: 20px;
+    width:50%;
+    height: 50px;
+    border-radius: 5px;
+    padding:10px 80px;
+    border:1px solid silver;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid red;
+
+}
+.icon{ 
+    min-width: 50px;
+    text-align: center;
+    color:red
+
+}
+.button{
+    
+    border: none;
+    width:50%;
+    color:white;
+    background-color:brown;
+    font-size: 20px;
+    padding: 15px;
+    border-radius:5px ;
+    cursor:pointer;
+    margin: 9px 100px;
+}
+.button:hover{
+    background:rgb(233, 104, 179);
+}
+p{
+  
+    font-size: 20px;
+    color :black;
+}
+b{
+    color: pink;
+}
+.link{
+    text-decoration: none;
+    color:rgb(233, 104, 179);
+    font-weight: 600;
+}
+.link:hover{
+    color:brown;
+}

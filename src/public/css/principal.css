@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+  nav{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 55% 25% 10% 10%;
+    grid-template-rows: 130px;
+    width: 100%;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    
+  }
+
+  button{
+  width: 20px;
+  height: 50px;
+  
+  }
+.button-buscador{
+     width: 16px;
+   
+}
+
+.logo{
+    width: 130px;
+    height: 100px;
+    border-radius: 50px;   
+    padding-top:  1%; 
+    margin-left: 8%;
+}
+
+.busquedaP{
+    border-color: rgb(87, 30, 12);
+    border-width: 2px;
+    border-style: solid;
+    width: 410px;
+    height:40px;
+    border-radius: 50px;
+   
+}
+
+.buscar{
+    border: none;
+    margin-bottom: 5px;
+    width:370px;
+    height:40px;
+    text-align: right;
+    font-size: 100%;
+    margin-right: 2%;
+    font-family:arial ;
+    border-radius: 50px;
+    background: transparent;
+
+}
+.buscar:focus{
+    outline: none;
+}
+
+
+
+.inicio{
+    text-decoration: none;
+    border-color: rgb(87, 30, 12);
+    border-width: 3px;
+    border-style: solid;
+    font-family: arial;
+    width:160px;
+    height:30px;
+    color: rgb(36, 33, 33);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-weight: bolder;
+    color:rgb(87, 30, 12);
+
+}
+
+.registro{
+    text-decoration: none;
+    font-weight: bolder;
+    color:rgb(87, 30, 12);
+    font-family: arial;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:160px;
+    height:30px;
+    font-size: 120%;
+
+}
+
+.lista-principal{
+    display: grid;
+    grid-template-columns: 4% 2% 5% 2% 6% 2% 3%;
+    list-style: none;
+    font-family: arial;
+    font-size: 130%;
+    justify-content: center;
+    width: 100%;
+    margin-top: 180px;
+    justify-items: start;
+    align-items: end;
+   
+
+}
+
+.a{
+    text-decoration: none;
+    color:rgb(87, 30, 12);
+    font-family: arial;
+}
+
+a:hover{
+    color:rgb(233, 104, 179);
+}
+
+
+
+.ab{
+    text-decoration: none;
+    color:rgb(233, 104, 179);
+    font-family: arial;
+}
+
+.fondo-rosa{
+    background: url(/img/caferosasi.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:50vh;
+    margin-top: 2%;
+
+    
+}
+
+h1{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    text-align: right;
+    font-size: 250%;
+    font-weight: bolder;
+    padding-top: 9%;
+    padding-right: 6%;
+}
+
+h2{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    text-align: right;
+    font-size: 200%;
+    padding-right: 6%;
+    margin-top: 5px;
+}
+
+.CATA{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    display:flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    padding-right: 3%;
+    margin-top: 6px;
+    font-size: 160%;
+    width:9%;
+    height:9%;
+    border-color: rgb(87, 30, 12);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 50px;
+    margin-left: 81%;
+    margin-top: 1%;
+    padding-top:10px; 
+    padding-left: 18px;   
+
+}
+
+.info{
+    display: grid;
+    grid-template-columns:20% 2% 22% 2% 17%;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+
+
+
+.hijo{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.imagen{
+    width:50px;
+    
+}
+
+
+.imagenn{
+    width:50px;
+    height:50px;
+    margin-left: 5%;
+}
+
+.imagene{
+    width:50px;
+    height:50px;
+    margin-left: 5%;
+}
+
+.parrafo{
+    font-family: arial;
+    font-size: 160%;
+    color:rgb(87, 30, 12) ;
+    display:flex;
+    align-items: center;
+}
+
+.als{
+    list-style: none;
+    font-size: 160%;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.alss{
+    list-style: none;
+    font-size: 160%;
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.destacados{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% ;
+    margin-left: 20%;
+    margin-top: 4%;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    font-size: 160%;
+    color:rgb(87, 30, 12) ;
+    margin-top: 6%;
+}
+
+.coffi{
+    width: 90%;
+    height: 80%;
+}
+
+.coffi:hover{
+    opacity: 0.6;
+}
+
+.cafep{
+    font-family: arial;
+    font-size: 130%;
+    color:rgb(87, 30, 12) ;
+    margin-top: 2%;
+    
+}
+
+.precio{
+    font-family: arial;
+    font-size: 120%;
+    color:rgb(87, 30, 12) ;
+    margin-top: 2%;
+}
+
+.as{
+    text-decoration: none;
+}
+
+
+.cafep:hover{
+    color:rgb(233, 104, 179);
+}
+
+.botonProdc{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-right: 3%;
+    margin-top: 6px;
+    font-size: 130%;
+    width:180px;
+    height:30px;
+    border-color: rgb(87, 30, 12);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 50px;
+    margin-top: 3%;
+    padding-top:4px; 
+    margin-left: 45%;
+    padding-left: 3%;
+    margin-bottom: 4%;
+
+      
+}
+
+
+.seccion{
+    background: url(/img/caferosaotro.jpg);
+    height: 300px;
+}
+
+.contc{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    text-align: right;
+    font-size: 250%;
+    font-weight: bolder;
+    padding-top: 5%;
+    padding-right: 6%;
+}
+
+.con{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    text-align: right;
+    font-size: 200%;
+    padding-right: 6%;
+    margin-top: 5px;
+}
+
+
+.ayuda{
+    color:rgb(87, 30, 12);
+    text-decoration: none;
+    font-family: arial;
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-right: 3%;
+    margin-top: 6px;
+    font-size: 130%;
+    width:20px;
+    height:30px;
+    border-color: rgb(87, 30, 12);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 50px;
+    margin-top: 1%;
+    padding-top:4px; 
+    margin-left: 86%;
+    padding-left: 3%;
+    margin-bottom: 4%;
+}
+
+
+footer{
+    background: rgb(241, 161, 205);
+    color: rgb(87, 30, 12);
+    display: grid;
+    grid-template-columns: auto auto ;
+    height: 150px;
+}
+
+.futo{
+    display: grid;
+    grid-template-columns: 19% 3% 19% 3% 19%;
+}
+
+.derechos{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+}
+
+.rayis{
+   text-decoration: none;
+   font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+}
+
+.raya{
+   font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
