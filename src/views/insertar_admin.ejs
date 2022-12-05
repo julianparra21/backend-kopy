@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopy</title>
+    <link rel="stylesheet" href="/css/insertar_admin.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="/imagenes/logo.png">
+     
+            
+            <form class="busquedaP" action="">
+    
+            <input class="buscar" type="text" name="busqueda" placeholder="Buscar" autocomplete="on">
+            <input class="button-buscador"type="image" src="/imagenes/busqueda.png"/>
+            
+            </form>
+    
+            <div class="editarP">
+                <a class="inicio" href="">Nombre admi</a>
+                <input class="button-perfil" type="image" src="/imagenes/usuario.png">
+    
+            </div>
+    
+            
+            
+            
+        </nav>
+    
+        <div class="lista-principal">
+    
+            <div class="listI"><a href="/Principal_Admi.html" class="a">Inicio</a></div>
+                <div class="list"><li>|</li></div>
+                <div class="listI"><a href="/catalogoADmi.html" class="ab">Catalogo</a></div>
+                <div class="list"><li>|</li></div>
+                <div class="listI"><a href="/categoria_Admi.html" class="a">Categorias</a></div>
+                <div class="list"><li>|</li></div>
+                <div class="listI"><a href="/nosotros_Admi.html" class="a">Nosotros</a></div>
+    
+        </div>
+    </header>
+
+    <section>
+        <h1>Insertar producto</h1>
+
+
+        <form class="form_product" action="/registrarproducto" method="post">
+
+        <div >
+            <p class="nombre">Nombre</p>
+            <input class="controls" type="nombre" name="nombre" placeholder=" Ingrese el nombre del producto">
+        
+            <p class="nombre">codigo</p>
+            <input class="controls" type="nombre" name="codigo" placeholder=" Ingrese el codigo del producto">
+        
+            <p class="nombre">Categoria</p>
+            <input class="controls" type="nombre" name="categoria" placeholder=" Ingrese la categoria del producto">
+        
+             <p class="nombre">Precio</p>
+            <input class="controls" type="nombre" name="precio" placeholder=" Ingrese el precio del producto">
+            <input class="boton2" type="submit"  value="Insertar"></input>
+            </div>
+
+        <!-- <div >
+            
+            <p class="nombree">Proveedor</p>
+            <input class="controls" type="nombre" name="proveedor" placeholder=" Ingrese el proveedor del producto">
+        
+        <div class="hijo">
+            <p class="nombre">Imagen</p>
+            <input class="imag" type="file" name="imagen">
+         </div>
+
+            
+
+        </div> -->
+
+        </form>
+    </section>
+
+    <footer>
+        <div class="derechos">
+            &copy;2022 Los Ilucionistas | tickettrain121@gmail.com
+        </div>
+
+        <div class="futo">
+        <a class="rayis" href="">Terminos y condiciones</a>
+        <p class="raya">|</p>
+        <a class="rayis" href="" >Politicas de privacidad</a>
+        <p class="raya">|</p>
+        <a class="rayis" href="" >Politicas de devolucion</a>
+    </div>
+    </footer>
+</body>
+</html>

@@ -91,6 +91,38 @@ controller.loginya = (req, res) => {
 controller.categorias=(req,res)=>{
   res.render('categorias')
 }
+
+controller.insertar=(req,res)=>{
+  res.render('insertar_admin')
+}
+
+controller.ingresar_producto=(req,res)=>{
+  req.getConnection(( conn,err) => {
+    let nombre_producto = req.body.  nombre;
+  let id_producto=req.body. codigo;
+  let categoria_productos=req.body.categoria;
+  let precio_producto=req.body.precio;
+  conn.query(`INSERT INTO productos set ?`, [
+    {
+      nombre: nombre_producto,
+      codigo: id_producto,
+      categoria: categoria_productos,
+      precio:precio_producto
+
+    }],
+   (error)=>{
+    if (!error) {
+      console.log("insert ok");
+      res.send(`registro-exitoso`)
+      
+    }else{
+      
+      console.log("no se pudo insertar");
+    }
+  
+  })
+
+  })};
  
 module.exports = controller;
 

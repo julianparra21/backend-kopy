@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+  nav{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 120%;
+    width: 100%;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    
+  }
+
+  button{
+  width: 20px;
+  height: 50px;
+  
+  }
+  .button-buscador{
+    width: 16px;
+  
+}
+
+.logo{
+    width: 140px;
+    height: 110px;
+    border-radius: 50px;   
+    padding-top:  1px; 
+    margin-left: 8%;
+}
+
+.busquedaP{
+    border-color: rgb(87, 30, 12);
+    border-width: 2px;
+    border-style: solid;
+    width: 70%;
+    height:40px;
+    border-radius: 50px;
+   
+}
+
+.buscar{
+    border: none;
+    margin-bottom: 5px;
+    width:90%;
+    height:40px;
+    text-align: right;
+    font-size: 100%;
+    margin-right: 2%;
+    font-family:arial ;
+    border-radius: 50px;
+    background: transparent;
+
+}
+.buscar:focus{
+    outline: none;
+}
+
+
+
+.inicio{
+    text-decoration: none;
+    font-family: arial;
+    width:160px;
+    height:30px;
+    color: rgb(36, 33, 33);
+    font-weight: bolder;
+    color:rgb(87, 30, 12);
+    padding: 15px 0 1px 10px;
+
+}
+
+.button-perfil{
+    height:25px;
+    padding: 9px 3px  10px 5px;
+    
+}
+
+.editarP{
+    
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    height: 30%;
+    
+
+}
+
+.registro{
+    text-decoration: none;
+    font-weight: bolder;
+    color:rgb(87, 30, 12);
+    font-family: arial;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:160px;
+    height:30px;
+    font-size: 120%;
+
+}
+
+
+
+.lista-principal{
+    display: grid;
+    grid-template-columns: 5% 2% 8% 2% 9% 3% 3%;
+    list-style: none;
+    font-family: arial;
+    font-size: 130%;
+    justify-content: center;
+    width: 100%;
+    margin-top: 12%;
+    justify-items: start;
+    align-items: end;
+   
+
+}
+
+.a{
+    text-decoration: none;
+    color:rgb(87, 30, 12);
+    font-family: arial;
+}
+
+a:hover{
+    color:rgb(233, 104, 179);
+}
+
+
+
+.ab{
+    text-decoration: none;
+    color:rgb(233, 104, 179);
+    font-family: arial;
+}
+
+
+h1{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+     margin-left: 20%;
+     font-size: 30px;
+}
+
+section{
+    margin-top: 8%;
+    
+}
+
+.nombre{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    margin-left: 20%;
+    margin-top: 6%;
+    font-size: 20px;
+}
+
+.nombree{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    margin-left: 20%;
+    margin-top: 4%;
+    font-size: 20px;  
+}
+.controls{
+    margin-left: 20%;
+    margin-top: 5px;
+    width: 300px;
+    height: 30px;
+}
+
+.form_product{
+    display: grid;
+    grid-template-columns: 40% 40% ;
+    margin-left: 17%;
+    margin-top: 20px;
+}
+
+.boton2{
+    width: 150px;
+    height: 30px;
+    margin-top: 8%;
+    margin-left: 20%;
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    text-decoration: none;
+    font-size: 160%;
+    border-color: rgb(87, 30, 12);
+    border-width: 1px;
+    border-style: solid;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    
+}
+
+.imag{
+    margin-top: 20px;
+    margin-left: 20%;
+}
+
+footer{
+    background: rgb(241, 161, 205);
+    color: rgb(87, 30, 12);
+    display: grid;
+    grid-template-columns: auto auto ;
+    height: 150px;
+    margin-top: 2%;
+    
+}
+
+.futo{
+    display: grid;
+    grid-template-columns: 26% 3% 26% 3% 26%;
+}
+
+.derechos{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+}
+
+.rayis{
+   text-decoration: none;
+   font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+}
+
+.raya{
+   font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
