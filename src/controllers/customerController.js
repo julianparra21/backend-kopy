@@ -88,9 +88,9 @@ controller.loginya = (req, res) => {
   });
 };
 
-controller.categoriad= (req, res) => {
-  res.render()
-};
-
+controller.categorias=(req,res)=>{
+  res.render('categorias')
+}
+ 
 module.exports = controller;
 

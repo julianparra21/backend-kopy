@@ -6,5 +6,6 @@ router.get('/registro', customerController.registro);
 router.get('/login', customerController.login);
 router.post('/loginya', customerController.loginya);
 router.post('/add', customerController.save);
+router.get('/categorias', customerController.categorias)
 router.get('/', customerController.principal);
 module.exports = router;

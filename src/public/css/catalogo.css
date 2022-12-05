@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+  nav{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 55% 25% 10% 10%;
+    grid-template-rows: 130px;
+    width: 100%;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    
+  }
+
+  button{
+  width: 20px;
+  height: 50px;
+  
+  }
+.button-buscador{
+     width: 16px;
+   
+}
+
+.logo{
+    width: 140px;
+    height: 110px;
+    border-radius: 50px;   
+    padding-top:  1px; 
+    margin-left: 8%;
+}
+
+.busquedaP{
+    border-color: rgb(87, 30, 12);
+    border-width: 2px;
+    border-style: solid;
+    width: 410px;
+    height:40px;
+    border-radius: 50px;
+   
+}
+
+.buscar{
+    border: none;
+    margin-bottom: 5px;
+    width:370px;
+    height:40px;
+    text-align: right;
+    font-size: 100%;
+    margin-right: 2%;
+    font-family:arial ;
+    border-radius: 50px;
+    background: transparent;
+
+}
+.buscar:focus{
+    outline: none;
+}
+
+
+
+.inicio{
+    text-decoration: none;
+    border-color: rgb(87, 30, 12);
+    border-width: 3px;
+    border-style: solid;
+    font-family: arial;
+    width:160px;
+    height:30px;
+    color: rgb(36, 33, 33);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-weight: bolder;
+    color:rgb(87, 30, 12);
+
+}
+
+.registro{
+    text-decoration: none;
+    font-weight: bolder;
+    color:rgb(87, 30, 12);
+    font-family: arial;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:160px;
+    height:30px;
+    font-size: 120%;
+
+}
+
+.lista-principal{
+    display: grid;
+    grid-template-columns: 4% 2% 5% 2% 6% 2% 3%;
+    list-style: none;
+    font-family: arial;
+    font-size: 130%;
+    justify-content: center;
+    width: 100%;
+    margin-top: 185px;
+    justify-items: start;
+    align-items: end;
+   
+
+}
+
+.a{
+    text-decoration: none;
+    color:rgb(87, 30, 12);
+    font-family: arial;
+}
+
+a:hover{
+    color:rgb(233, 104, 179);
+}
+
+
+
+.ab{
+    text-decoration: none;
+    color:rgb(233, 104, 179);
+    font-family: arial;
+}
+
+.fondo-blanco{
+    background: url(/imagenes/caff.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+    margin-top: 2%;
+    height: 240px;
+}
+
+h1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: arial;
+    font-size: 160%;
+    padding-top: 5%;
+    color:rgb(87, 30, 12);
+    font-weight: bolder;
+    margin-right: 20%;
+
+}
+
+
+.catalogo{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    
+}
+
+.coffi{
+width: 260px;
+height: 300px;
+}
+
+.coffi:hover{
+    opacity: 0.6;
+}
+
+.cafep{
+    font-family: arial;
+    font-size: 130%;
+    color:rgb(87, 30, 12) ;
+    margin-top: 2%;
+    
+}
+
+.precio{
+    font-family: arial;
+    font-size: 120%;
+    color:rgb(87, 30, 12) ;
+    margin-top: 2%;
+}
+
+.as{
+    text-decoration: none;
+    margin-bottom: 6%;
+}
+
+.cafep:hover{
+    color:rgb(233, 104, 179);
+}
+
+footer{
+    background: rgb(241, 161, 205);
+    color: rgb(87, 30, 12);
+    display: grid;
+    grid-template-columns: auto auto ;
+    height: 150px;
+    margin-top: 2%;
+    
+}
+
+.futo{
+    display: grid;
+    grid-template-columns: 19% 3% 19% 3% 19%;
+}
+
+.derechos{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+}
+
+.rayis{
+   text-decoration: none;
+   font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+}
+
+.raya{
+   font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
