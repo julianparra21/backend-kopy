@@ -21,12 +21,24 @@ app.use(myConnection(mysql,{
     host: 'localhost',
     user: 'root',
     password: '',
-    port: 3310,
-    database: 'kopycrazy'
+    port: 3306,
+    database: 'kopycrazyfruit'
 }, 'single'));
 app.use(express.urlencoded({extended: false}));
 
-
+//auth pages
+app.get('/loginya', (req, res) => {
+  console.log("hola mundo");
+  if (req.session.loggedin) {
+      res.render('loginya',{
+          nombre: req.session.nombre
+      });
+  } else {
+      res.render('loginya',{
+          nombre: 'inicie sesion'
+      });
+  }
+});
 
 //routes
 app.use('/', customerRoutes);
