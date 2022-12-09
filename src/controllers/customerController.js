@@ -1,16 +1,10 @@
 const controller = {};
 const nodemailer = require("nodemailer");
-<<<<<<< HEAD
 const bcrypt = require("bcrypt")
 const session = require("express-session");
 const {
   get
 } = require("../routes/customer");
-=======
-const bcrypt = require("bcrypt");
-const session = require("express-session");
-const { get } = require("../routes/customer");
->>>>>>> 8c13f65d6c7f73f84bd8e66657de2ab2ab3433c6
 controller.registro = (req, res) => {
   req.getConnection((err, conn) => {
     conn.query("SELECT * FROM registro", (err, registro) => {
@@ -31,7 +25,6 @@ controller.save = (req, res) => {
     let contraseña = req.body.contraseña;
 
     let contraseñaHash = bcrypt.hashSync(contraseña, 10);
-<<<<<<< HEAD
     conn.query(`INSERT INTO registro set ?`, [{
       nombre: nombre,
       correo: correo,
@@ -41,22 +34,6 @@ controller.save = (req, res) => {
       console.log("Registro guardado");
       res.render('principal');
     });
-=======
-    conn.query(
-      `INSERT INTO registro set ?`,
-      [
-        {
-          nombre: nombre,
-          correo: correo,
-          contraseña: contraseñaHash,
-        },
-      ],
-      (err, registro) => {
-        console.log("Registro guardado");
-        res.render("principal");
-      }
-    );
->>>>>>> 8c13f65d6c7f73f84bd8e66657de2ab2ab3433c6
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
@@ -67,7 +44,6 @@ controller.save = (req, res) => {
     });
     transporter;
 
-<<<<<<< HEAD
     transporter.sendMail({
         from: 'kopycrazyfruit@gmail.com',
         to: correo,
@@ -76,22 +52,6 @@ controller.save = (req, res) => {
       }).then((res) => {
         console.log(res);
       }).catch((err) => {
-=======
-    transporter
-      .sendMail({
-        from: "kopycrazyfruit@gmail.com",
-        to: correo,
-        subject: "Registro exitoso",
-        html:
-          '<h1>SU REGISTRO FUE EXITOSO</h1><img src="https://res.cloudinary.com/dfgp6rfmc/image/upload/v1666142034/kopy/logo_uf0miv.png"><p><b>' +
-          nombre +
-          "</b>, El presente correo es para informar que ha sido registrad@ correctamente en nuestro aplicativo web <b>Kopy  crazy fruit</b> Esperamos que nuestra aplicación sea de su agrado y disfrute de todas las herramientas brindadas en nuestro aplicativo web</p>",
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
->>>>>>> 8c13f65d6c7f73f84bd8e66657de2ab2ab3433c6
         console.log(err);
       })
       .then((res) => {
@@ -136,7 +96,6 @@ controller.loginya = (req, res) => {
   });
 };
 
-<<<<<<< HEAD
 controller.categorias = (req, res) => {
   res.render('categorias')
 }
@@ -149,24 +108,10 @@ controller.ingresar_producto = (req, res) => {
 
   // console.log(req.body);
   req.getConnection((err, conn) => {
-=======
-
-controller.categorias = (req, res) => {
-  res.render("categorias");
-};
-
-controller.insertar = (req, res) => {
-  res.render("insertar_admin");
-};
-
-controller.ingresar_producto = (req, res) => {
-  req.getConnection((conn, err) => {
->>>>>>> 8c13f65d6c7f73f84bd8e66657de2ab2ab3433c6
     let nombre_producto = req.body.nombre;
     let id_producto = req.body.codigo;
     let categoria_productos = req.body.categoria;
     let precio_producto = req.body.precio;
-<<<<<<< HEAD
     let proveedor_producto = req.body.proveedor;
     if (categoria_productos == 1) {
       categoria_productos = 'pasabocas'
@@ -204,29 +149,3 @@ controller.catalogo = (req, res) => {
 };
 
 module.exports = controller;
-=======
-    conn.query(
-      `INSERT INTO productos set ?`,
-      [
-        {
-          nombre: nombre_producto,
-          codigo: id_producto,
-          categoria: categoria_productos,
-          precio: precio_producto,
-        },
-      ],
-      (error) => {
-        if (!error) {
-          console.log("insert ok");
-          res.send(`registro-exitoso`);
-        } else {
-          console.log("no se pudo insertar");
-        }
-      }
-    );
-  });
-  
-};
-
-module.exports = controller;
->>>>>>> 8c13f65d6c7f73f84bd8e66657de2ab2ab3433c6

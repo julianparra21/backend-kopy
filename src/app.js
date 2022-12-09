@@ -28,7 +28,6 @@ app.use(express.urlencoded({extended: false}));
 
 //auth pages
 app.get('/loginya', (req, res) => {
-  console.log("hola mundo");
   if (req.session.loggedin) {
       res.render('loginya',{
           nombre: req.session.nombre
