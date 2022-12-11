@@ -14,8 +14,13 @@ CREATE table insertar_admin(
     precio_producto int(50) not null,
     proveedor_producto varchar(50) not null
     
-)
+);
 
+CREATE table registro_us(
+    nombre varchar(50) not null,
+    correo varchar(50) not null,
+    contraseña varchar(50) not  null
+)
 show tables;
 
 describe registro;

@@ -148,4 +148,55 @@ controller.catalogo = (req, res) => {
   res.render('catalogo');
 };
 
+
+controller.selec_us=(req,res)=>{
+  res.render('select_register');
+}
+controller.saveAdmin=(req,res)=>{
+  req.getConnection((err, conn) => {
+    let nombre = req.body.nombre;
+    let correo = req.body.correo;
+    let contraseña = req.body.contraseña;
+
+    let contraseñaHash = bcrypt.hashSync(contraseña, 10);
+    conn.query(`INSERT INTO registro set ?`, [{
+      nombre: nombre,
+      correo: correo,
+      contraseña: contraseñaHash
+
+    }], (err, registro) => {
+      console.log("Registro guardado");
+      res.render('principal');
+    });
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      auth: {
+        user: "kopycrazyfruit@gmail.com",
+        pass: "aszoehmhpmbjsozt",
+      },
+    });
+    transporter;
+
+    transporter.sendMail({
+        from: 'kopycrazyfruit@gmail.com',
+        to: correo,
+        subject: 'Registro exitoso',
+        html: '<h1>SU REGISTRO FUE EXITOSO</h1><img src="https://res.cloudinary.com/dfgp6rfmc/image/upload/v1666142034/kopy/logo_uf0miv.png"><p><b>' + nombre + '</b> ,El presente correo es para informar que ha sido registrado(a) correctamente en nuestro aplicativo web <b>Kopy  crazy fruit</b> Esperamos que nuestra aplicación sea de su agrado y disfrute de todas las herramientas brindadas en nuestro aplicativo web</p>',
+      }).then((res) => {
+        console.log(res);
+      }).catch((err) => {
+        console.log(err);
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+}
+controller.registroAdmin=(req,res)=>{
+  res.render('registroAd');
+}
 module.exports = controller;
