@@ -32,7 +32,7 @@ controller.save = (req, res) => {
 
     }], (err, registro) => {
       console.log("Registro guardado");
-      res.render('principal');
+      res.render('principal_usuario');
     });
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -159,14 +159,14 @@ controller.saveAdmin=(req,res)=>{
     let contraseña = req.body.contraseña;
 
     let contraseñaHash = bcrypt.hashSync(contraseña, 10);
-    conn.query(`INSERT INTO registro set ?`, [{
+    conn.query(`INSERT INTO registro_us set ?`, [{
       nombre: nombre,
       correo: correo,
       contraseña: contraseñaHash
 
     }], (err, registro) => {
       console.log("Registro guardado");
-      res.render('principal');
+      res.render('Principal_Admin');
     });
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
