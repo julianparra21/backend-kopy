@@ -132,13 +132,18 @@ controller.ingresar_producto = (req, res) => {
         console.log(err);
         console.log("---------------------------------------------");
       }
-      if (err.code == "ER_DUP_ENTRY") {
-        return res.send(
-          "<script>alert('El id del producto ya existe'); window.location = '/insertar'</script>"
+      res.send(
+        "<script>alert('El  producto fue agregado correctamente'); window.location = '/insertar'</script>"
+
+      )
+      res.render('catalogo_Admin')
+      // if (err.code == "ER_DUP_ENTRY") {
+      //   return res.send(
+      //     "<script>alert('El id del producto ya existe'); window.location = '/insertar'</script>"
 
 
-        );
-      }
+      //   );
+      // }
 
     })
   })
@@ -199,4 +204,11 @@ controller.saveAdmin=(req,res)=>{
 controller.registroAdmin=(req,res)=>{
   res.render('registroAd');
 }
+
+
+controller.catalogoAdmi=(req,res)=>{
+  res.render('catalogo_Admin');
+}
+
+
 module.exports = controller;

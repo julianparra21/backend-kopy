@@ -14,8 +14,8 @@
   nav{
     position: fixed;
     display: grid;
-    grid-template-columns: 55% 25% 10% 10%;
-    grid-template-rows: 130px;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 120%;
     width: 100%;
     align-items: center;
     background: rgba(255, 255, 255, 0.9);
@@ -27,7 +27,7 @@
   height: 50px;
   
   }
-.button-buscador{
+ .button-buscador{
      width: 16px;
    
 }
@@ -44,7 +44,7 @@
     border-color: rgb(87, 30, 12);
     border-width: 2px;
     border-style: solid;
-    width: 410px;
+    width: 70%;
     height:40px;
     border-radius: 50px;
    
@@ -53,7 +53,7 @@
 .buscar{
     border: none;
     margin-bottom: 5px;
-    width:370px;
+    width:90%;
     height:40px;
     text-align: right;
     font-size: 100%;
@@ -69,47 +69,16 @@
 
 
 
-.inicio{
-    text-decoration: none;
-    border-color: rgb(87, 30, 12);
-    border-width: 3px;
-    border-style: solid;
-    font-family: arial;
-    width:160px;
-    height:30px;
-    color: rgb(36, 33, 33);
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    font-weight: bolder;
-    color:rgb(87, 30, 12);
-
-}
-
-.registro{
-    text-decoration: none;
-    font-weight: bolder;
-    color:rgb(87, 30, 12);
-    font-family: arial;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:160px;
-    height:30px;
-    font-size: 120%;
-
-}
 
 .lista-principal{
     display: grid;
-    grid-template-columns: 4% 2% 5% 2% 6% 2% 3%;
+    grid-template-columns: 5% 2% 8% 2% 9% 3% 3%;
     list-style: none;
     font-family: arial;
     font-size: 130%;
     justify-content: center;
     width: 100%;
-    margin-top: 185px;
+    margin-top: 12%;
     justify-items: start;
     align-items: end;
    
@@ -138,7 +107,7 @@ a:hover{
     background: url(/img/caff.jpg);
     background-repeat:no-repeat ;
     background-size: cover;
-    margin-top: 2%;
+    margin-top: 7%;
     height: 240px;
 }
 
@@ -182,6 +151,50 @@ height: 300px;
     
 }
 
+.insert{
+    font-family: arial;
+    font-size: 120%;
+    color:rgb(87, 30, 12) ;
+    text-decoration: none;
+ 
+}
+
+.inicio{
+    text-decoration: none;
+    font-family: arial;
+    width:160px;
+    height:30px;
+    color: rgb(36, 33, 33);
+    font-weight: bolder;
+    color:rgb(87, 30, 12);
+    padding: 15px 0 1px 10px;
+
+}
+
+.button-perfil{
+   
+    height:25px;
+    padding: 9px 3px  10px 5px;
+    
+}
+
+.editarP{
+    
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    height: 30%;
+    
+
+}
+
+
+
+.conte{
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
 .precio{
     font-family: arial;
     font-size: 120%;
@@ -210,7 +223,7 @@ footer{
 
 .futo{
     display: grid;
-    grid-template-columns: 19% 3% 19% 3% 19%;
+    grid-template-columns: 26% 3% 26% 3% 26%;
 }
 
 .derechos{
@@ -238,4 +251,16 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.button{
+    width: 400px;
+    height: 50px;
+    margin-left: 10%;
+    margin-top: 2%;
+    border: none;
+    border-radius: 10px;
+    list-style: none;
+    background-color: rgb(241, 161, 205);
+
+   
 }

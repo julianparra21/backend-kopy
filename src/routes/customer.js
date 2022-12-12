@@ -10,6 +10,7 @@ router.post('/addAdmin',customerController.saveAdmin);
 router.post("/insertarProducto",customerController.ingresar_producto)
 router.get('/categorias', customerController.categorias);
 router.get('/catalogo', customerController.catalogo);
+router.get('/catalogoAdmin',customerController.catalogoAdmi);
 router.get('/insertar', customerController.insertar);
 router.get('/select', customerController.selec_us);
 router.get('/ResAd',customerController.registroAdmin);
