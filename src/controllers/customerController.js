@@ -209,6 +209,10 @@ controller.registroAdmin=(req,res)=>{
 controller.catalogoAdmi=(req,res)=>{
   res.render('catalogo_Admin');
 }
+controller.principalAdmin=(req,res)=>{
+  res.render('Principal_Admin');
+}
+
 
 
 module.exports = controller;

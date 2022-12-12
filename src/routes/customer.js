@@ -14,5 +14,6 @@ router.get('/catalogoAdmin',customerController.catalogoAdmi);
 router.get('/insertar', customerController.insertar);
 router.get('/select', customerController.selec_us);
 router.get('/ResAd',customerController.registroAdmin);
+router.get('/principal_Admin', customerController.principalAdmin);
 router.get('/', customerController.principal);
 module.exports = router;
