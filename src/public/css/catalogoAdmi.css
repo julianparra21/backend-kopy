@@ -259,8 +259,12 @@ footer{
     margin-top: 2%;
     border: none;
     border-radius: 10px;
-    list-style: none;
+    
     background-color: rgb(241, 161, 205);
+  
 
    
+}
+.button a {
+    text-decoration: none;
 }
