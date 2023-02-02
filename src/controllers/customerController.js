@@ -2,6 +2,7 @@ const controller = {};
 const nodemailer = require("nodemailer");
 const bcrypt = require("bcrypt")
 const session = require("express-session");
+
 const {
   get
 } = require("../routes/customer");
@@ -120,7 +121,7 @@ controller.ingresar_producto = (req, res) => {
     } else if (categoria_productos == 3) {
       categoria_productos = 'desayuno'
     }
-    conn.query(`INSERT INTO insertar_admin set ?`, [{
+    conn.query(`INSERT INTO insertar_Producto set ?`, [{
       nombre_producto: nombre_producto,
       id_producto: id_producto,
       categoria_productos: categoria_productos,
@@ -204,6 +205,28 @@ controller.saveAdmin=(req,res)=>{
 controller.registroAdmin=(req,res)=>{
   res.render('registroAd');
 }
+
+//inicio de sesion del administrador
+controller.loginAdmin=(req,res)=>{
+  res.render('loginAd')
+};
+controller.loginAdminYa=(req,res)=>{
+  console.log(req.body.user);
+  req.getConnection((err, conn) => {
+    conn.query(`SELECT * FROM registro_us WHERE correo = '${req.body.user}'`, (err, rows) => {
+      
+      if (err) {
+        res.json(err);
+      }
+      console.log(rows[0].nombre);
+      res.render("Principal_Admin", {
+        data: rows[0].nombre,
+      });
+    });
+  });
+}
+
+
 
 
 controller.catalogoAdmi=(req,res)=>{

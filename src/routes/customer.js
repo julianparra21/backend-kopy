@@ -4,7 +4,9 @@ const customerController = require('../controllers/customerController');
 
 router.get('/registro', customerController.registro);
 router.get('/login', customerController.login);
+router.get('/loginAdmin',customerController.loginAdmin);
 router.post('/loginya', customerController.loginya);
+router.post('/loginyaAdmin',customerController.loginyaAdmin); 
 router.post('/add', customerController.save);
 router.post('/addAdmin',customerController.saveAdmin);
 router.post("/insertarProducto",customerController.ingresar_producto)
@@ -15,5 +17,6 @@ router.get('/insertar', customerController.insertar);
 router.get('/select', customerController.selec_us);
 router.get('/ResAd',customerController.registroAdmin);
 router.get('/principal_Admin', customerController.principalAdmin);
+router.get('/principal_Usuario', customerController.principalUsuario);
 router.get('/', customerController.principal);
 module.exports = router;
