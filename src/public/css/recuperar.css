@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+  nav{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 40% 32% 10% 20px;
+    grid-template-rows: 120%;
+    width: 100%;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    
+  }
+
+  button{
+  width: 20px;
+  height: 50px;
+  
+  }
+.button-buscador{
+     width: 16px;
+   
+}
+
+.logo{
+    width: 140px;
+    height: 110px;
+    border-radius: 50px;   
+    padding-top:  1px; 
+    margin-left: 8%;
+}
+
+.busquedaP{
+    border-color: rgb(87, 30, 12);
+    border-width: 2px;
+    border-style: solid;
+    width: 410px;
+    height:40px;
+    border-radius: 50px;
+   
+}
+
+.buscar{
+    border: none;
+    margin-bottom: 5px;
+    width:370px;
+    height:40px;
+    text-align: right;
+    font-size: 100%;
+    margin-right: 2%;
+    font-family:arial ;
+    border-radius: 50px;
+    background: transparent;
+
+}
+.buscar:focus{
+    outline: none;
+}
+
+
+
+.inicio{
+    text-decoration: none;
+    border-color: rgb(87, 30, 12);
+    border-width: 3px;
+    border-style: solid;
+    font-family: arial;
+    width:160px;
+    height:30px;
+    color: rgb(36, 33, 33);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-weight: bolder;
+    color:rgb(87, 30, 12);
+
+}
+
+.registro{
+    text-decoration: none;
+    font-weight: bolder;
+    color:rgb(87, 30, 12);
+    font-family: arial;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:160px;
+    height:30px;
+    font-size: 120%;
+
+}
+
+.lista-principal{
+    display: grid;
+    grid-template-columns: 5% 2% 8% 2% 9% 3% 3%;
+    list-style: none;
+    font-family: arial;
+    font-size: 130%;
+    justify-content: center;
+    width: 100%;
+    margin-top: 12%;
+    justify-items: start;
+    align-items: end;
+   
+
+}
+
+.a{
+    text-decoration: none;
+    color:rgb(87, 30, 12);
+    font-family: arial;
+}
+
+a:hover{
+    color:rgb(233, 104, 179);
+}
+
+
+
+.ab{
+    text-decoration: none;
+    color:rgb(233, 104, 179);
+    font-family: arial;
+}
+
+
+.fondo-{
+    background: url(/img/pexels-photo-8106476.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 7%;
+    height: 210px;
+}
+
+
+h1{
+    display: flex;
+    font-family: arial;
+    font-size: 160%;
+    color:rgb(87, 30, 12);
+    font-weight: bolder;
+    justify-content: flex-end;
+    padding-top: 5%;
+    margin-right: 20%;
+   
+}
+
+.cuadroRecupera{
+    background-color: rgb(241, 161, 205);
+    width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+    flex-direction: column;
+    margin-left: 20%;
+    
+}
+
+.imagen{
+    width: 100px;
+    margin-bottom: 4%;
+}
+
+
+
+input{
+    width: 300px;
+    height: 30px;
+    border: none;
+}
+
+
+
+input:focus{
+    outline: none;
+}
+
+
+
+
+
+   
+
+
+
+.titulo{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bolder;
+    font-family: arial;
+    margin-left: 2%;
+    margin-top: 2%;
+    color:rgb(87, 30, 12);
+}
+
+.pp{
+    display: flex;
+    justify-content: flex-start;
+    font-family: arial;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    color:rgb(87, 30, 12);
+}
+
+footer{
+    background: rgb(241, 161, 205);
+    color: rgb(87, 30, 12);
+    display: grid;
+    grid-template-columns: auto auto ;
+    height: 150px;
+    margin-top: 2%;
+    margin-bottom: 0;
+    
+}
+
+.futo{
+    display: grid;
+    grid-template-columns: 26% 3% 26% 3% 26%;
+}
+
+.derechos{
+    font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+}
+
+.rayis{
+   text-decoration: none;
+   font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+}
+
+.raya{
+   font-family: arial;
+    color:rgb(87, 30, 12);
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

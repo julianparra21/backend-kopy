@@ -158,53 +158,53 @@ controller.catalogo = (req, res) => {
 controller.selec_us=(req,res)=>{
   res.render('select_register');
 }
-controller.saveAdmin=(req,res)=>{
-  req.getConnection((err, conn) => {
-    let nombre = req.body.nombre;
-    let correo = req.body.correo;
-    let contraseña = req.body.contraseña;
+// controller.saveAdmin=(req,res)=>{
+//   req.getConnection((err, conn) => {
+//     let nombre = req.body.nombre;
+//     let correo = req.body.correo;
+//     let contraseña = req.body.contraseña;
 
-    let contraseñaHash = bcrypt.hashSync(contraseña, 10);
-    conn.query(`INSERT INTO registro_us set ?`, [{
-      nombre: nombre,
-      correo: correo,
-      contraseña: contraseñaHash
+//     let contraseñaHash = bcrypt.hashSync(contraseña, 10);
+//     conn.query(`INSERT INTO registro_us set ?`, [{
+//       nombre: nombre,
+//       correo: correo,
+//       contraseña: contraseñaHash
 
-    }], (err, registro) => {
-      console.log("Registro guardado");
-      res.render('Principal_Admin');
-    });
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      auth: {
-        user: "kopycrazyfruit@gmail.com",
-        pass: "aszoehmhpmbjsozt",
-      },
-    });
-    transporter;
+//     }], (err, registro) => {
+//       console.log("Registro guardado");
+//       res.render('Principal_Admin');
+//     });
+//     const transporter = nodemailer.createTransport({
+//       host: "smtp.gmail.com",
+//       port: 587,
+//       auth: {
+//         user: "kopycrazyfruit@gmail.com",
+//         pass: "aszoehmhpmbjsozt",
+//       },
+//     });
+//     transporter;
 
-    transporter.sendMail({
-        from: 'kopycrazyfruit@gmail.com',
-        to: correo,
-        subject: 'Registro exitoso',
-        html: '<h1>SU REGISTRO FUE EXITOSO</h1><img src="https://res.cloudinary.com/dfgp6rfmc/image/upload/v1666142034/kopy/logo_uf0miv.png"><p><b>' + nombre + '</b> ,El presente correo es para informar que ha sido registrado(a) correctamente en nuestro aplicativo web <b>Kopy  crazy fruit</b> Esperamos que nuestra aplicación sea de su agrado y disfrute de todas las herramientas brindadas en nuestro aplicativo web</p>',
-      }).then((res) => {
-        console.log(res);
-      }).catch((err) => {
-        console.log(err);
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
-}
-controller.registroAdmin=(req,res)=>{
-  res.render('registroAd');
-}
+//     transporter.sendMail({
+//         from: 'kopycrazyfruit@gmail.com',
+//         to: correo,
+//         subject: 'Registro exitoso',
+//         html: '<h1>SU REGISTRO FUE EXITOSO</h1><img src="https://res.cloudinary.com/dfgp6rfmc/image/upload/v1666142034/kopy/logo_uf0miv.png"><p><b>' + nombre + '</b> ,El presente correo es para informar que ha sido registrado(a) correctamente en nuestro aplicativo web <b>Kopy  crazy fruit</b> Esperamos que nuestra aplicación sea de su agrado y disfrute de todas las herramientas brindadas en nuestro aplicativo web</p>',
+//       }).then((res) => {
+//         console.log(res);
+//       }).catch((err) => {
+//         console.log(err);
+//       })
+//       .then((res) => {
+//         console.log(res);
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//       });
+//   });
+// }
+// controller.registroAdmin=(req,res)=>{
+//   res.render('registroAd');
+// }
 
 //inicio de sesion del administrador
 controller.loginAdmin=(req,res)=>{
@@ -226,6 +226,21 @@ controller.loginAdminYa=(req,res)=>{
   });
 }
 
+//recuperar contraseña
+controller.recuperar=(req,res)=>{
+  res.render('recuperar');
+}
+controller.recuperarYa=(req,res)=>{
+  req.getConnection((err, conn) => {
+    conn.query(`SELECT * FROM registro_us WHERE correo = '${req.body.user}'`, (err, rows) => {
+      if (err) {
+        res.json(err);
+      }
+      console.log(rows[0].nombre);
+     res.send("<script>alert('La contraseña se cambio correctamente'); window.location = '/recuperar'</script>");
+    });
+  });
+}
 
 
 
@@ -234,6 +249,9 @@ controller.catalogoAdmi=(req,res)=>{
 }
 controller.principalAdmin=(req,res)=>{
   res.render('Principal_Admin');
+}
+controller.categoriasAdmin=(req,res)=>{
+  res.render('categorias_Admin');
 }
 
 

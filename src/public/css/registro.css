@@ -1,5 +1,5 @@
 body{
-  background-image: url(/img/fondo2.webp);
+  background-image: url(/img/fondocafe.avif);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -25,7 +25,7 @@ body{
 }
 h1{
     text-align: center;
-    color:rgb(233, 104, 179);
+    color:brown;
     font-size: 40px;
 }
 input[type="text"],
@@ -63,7 +63,7 @@ input[type="password"]{
     margin: 9px 100px;
 }
 .button:hover{
-    background:rgb(233, 104, 179);
+    background:brown;
 }
 p{
   
@@ -71,13 +71,17 @@ p{
     color :black;
 }
 b{
-    color: pink;
+    color: brown;
 }
 .link{
     text-decoration: none;
-    color:rgb(233, 104, 179);
+    color:brown;
     font-weight: 600;
 }
 .link:hover{
     color:brown;
 }
+.button:is(:focus, :focus-within,:active) {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(83, 43, 43), 0 0 0 6px rgb(82, 29, 29);
+  }
