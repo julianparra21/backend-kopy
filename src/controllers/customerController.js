@@ -89,9 +89,9 @@ controller.loginya = (req, res) => {
         res.json(err);
       }
 
-      console.log(rows[0].nombre);
+    
       res.render("principal_usuario", {
-        data: rows[0].nombre,
+        
       });
     });
   });
@@ -218,29 +218,17 @@ controller.loginAdminYa=(req,res)=>{
       if (err) {
         res.json(err);
       }
-      console.log(rows[0].nombre);
+      
       res.render("Principal_Admin", {
-        data: rows[0].nombre,
-      });
+        
+        });
     });
   });
 }
 
-//recuperar contraseña
-controller.recuperar=(req,res)=>{
-  res.render('recuperar');
-}
-controller.recuperarYa=(req,res)=>{
-  req.getConnection((err, conn) => {
-    conn.query(`SELECT * FROM registro_us WHERE correo = '${req.body.user}'`, (err, rows) => {
-      if (err) {
-        res.json(err);
-      }
-      console.log(rows[0].nombre);
-     res.send("<script>alert('La contraseña se cambio correctamente'); window.location = '/recuperar'</script>");
-    });
-  });
-}
+//recuperar contraseña con token
+
+
 
 
 
