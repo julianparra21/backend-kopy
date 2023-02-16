@@ -20,7 +20,9 @@ router.get('/select', customerController.selec_us);
 // router.get('/ResAd',customerController.registroAdmin);
 router.get('/principal_Admin', customerController.principalAdmin);
 //router.get('/principal_Usuario', customerController.principalUsuario);
-//router.get('/recuperar', customerController.recuperar);
-//router.post('/recuperarYa', customerController.recuperarYa);
+router.get('/recuperar', customerController.recuperar);
+router.post('/recuperarYa', customerController.recuperarYa);
+router.post('/verificarContrasena',customerController.verificar);
+
 router.get('/', customerController.principal);
 module.exports = router;

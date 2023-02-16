@@ -3,6 +3,7 @@ CREATE DATABASE kopyCrazyFruit;
 use kopyCrazyFruit;
 
 CREATE table registro(
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nombre varchar(50) not null,
     correo varchar(50) not null unique,
     contraseña varchar(50) not  null
