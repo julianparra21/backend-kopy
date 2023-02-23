@@ -1,8 +1,7 @@
 const controller = {};
 const nodemailer = require("nodemailer");
 const bcrypt = require("bcrypt")
-const session = require("express-session");
-const crypto = require('crypto');
+
 const {
   get
 } = require("../routes/customer");
@@ -272,18 +271,18 @@ controller.recuperarYa = (req, res) => {
             console.log(err);
           });
 
-        // conn.query("UPDATE registro SET contraseña = ? WHERE correo = ?", [contraseñaDefinitiva, correo], (err, rows) => {
-        //   if (err) {
-        //     console.log("___________________________________________________");
-        //     console.log("Error en la base de datos")
-        //     console.log(err);
-        //     console.log("___________________________________________________");
-        //   } else {
-        //     console.log("___________________________________________________");
-        //     console.log("Contraseña cambiada");
-        //     console.log("___________________________________________________");
-        //   }
-        // })
+        conn.query("UPDATE registro SET contraseña = ? WHERE correo = ?", [contraseñaDefinitiva, correo], (err, rows) => {
+          if (err) {
+            console.log("___________________________________________________");
+            console.log("Error en la base de datos")
+            console.log(err);
+            console.log("___________________________________________________");
+          } else {
+            console.log("___________________________________________________");
+            console.log("Contraseña cambiada");
+            console.log("___________________________________________________");
+          }
+        })
         res.render('recuperar')
       }
 
@@ -364,7 +363,8 @@ controller.verificar = (req, res) => {
         if (bcrypt.compareSync(contraseñaRows, id)) {
           res.send('recuperar');
         } else {
-          res.send('recover-password');
+          // res.send('recover-password');
+          res.render('principal_usuario')
         }
       } else if(err){
         console.log("______________________________________________________________________________");
