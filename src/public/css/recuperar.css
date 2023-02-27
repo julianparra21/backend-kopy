@@ -137,9 +137,13 @@ a:hover{
 
 
 .fondo-{
-    background: url(/img/pexels-photo-8106476.jpeg);
-    background-repeat: no-repeat;
+    background: url(https://img.freepik.com/vector-gratis/fondo-realista-cafe-dibujos_79603-607.jpg?w=900&t=st=1677502212~exp=1677502812~hmac=af2e0a2bfcf39fbf649703c9da4271a2093c05bebeba460454a84cf56ff757eb);
     background-size: cover;
+    /* opacity: 0.5; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
     margin-top: 7%;
     height: 210px;
 }
@@ -149,16 +153,16 @@ h1{
     display: flex;
     font-family: arial;
     font-size: 160%;
-    color:rgb(87, 30, 12);
+    color: #fff;
     font-weight: bolder;
     justify-content: flex-end;
     padding-top: 5%;
-    margin-right: 20%;
+    margin-right: 38%;
    
 }
 
 .cuadroRecupera{
-    background-color: rgb(241, 161, 205);
+    background-color:#EFD5C3;
     width: 800px;
     height: 500px;
     display: flex;
@@ -189,7 +193,9 @@ input:focus{
     outline: none;
 }
 
-
+.futo{
+    width: 2rem;
+}
 
 
 
@@ -218,13 +224,16 @@ input:focus{
 }
 
 footer{
-    background: rgb(241, 161, 205);
+    background: #EFD5C3;
     color: rgb(87, 30, 12);
     display: grid;
     grid-template-columns: auto auto ;
     height: 150px;
     margin-top: 2%;
     margin-bottom: 0;
+    width: 3rem;
+    padding: 1em;
+    justify-content: center;
     
 }
 

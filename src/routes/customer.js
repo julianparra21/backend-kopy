@@ -10,7 +10,7 @@ router.post('/loginYaAdmin',customerController.loginAdminYa);
 router.post('/loginya', customerController.loginya);
 router.post('/add', customerController.save);
 // router.post('/addAdmin',customerController.saveAdmin);
-router.post("/insertarProducto",customerController.ingresar_producto)
+router.post('/insertarProducto',customerController.ingresar_producto)
 router.get('/categorias', customerController.categorias);
 router.get('/categoriasAdmin',customerController.categoriasAdmin);
 router.get('/catalogo', customerController.catalogo);
