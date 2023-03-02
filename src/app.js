@@ -17,14 +17,34 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //middlewares
-app.use(myConnection(mysql,{
+// app.use(myConnection(mysql,{
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     port: 3306,
+//     database: 'kopycrazyfruit'
+// }, 'single'));
+// app.use(express.urlencoded({extended: false}));
+
+const dbconnection={
     host: 'localhost',
     user: 'root',
     password: '',
     port: 3306,
     database: 'kopycrazyfruit'
-}, 'single'));
-app.use(express.urlencoded({extended: false}));
+
+}
+
+try {
+    app.use(myConnection(mysql,dbconnection,'single'));
+    app.use(express.urlencoded({extended: false}));
+} catch (error) {
+    console.log(error);
+    console.log('error');
+    
+
+    
+}
 
 //auth pages
 app.get('/loginya', (req, res) => {
@@ -38,6 +58,8 @@ app.get('/loginya', (req, res) => {
       });
   }
 });
+
+
 
 //routes
 app.use('/', customerRoutes);

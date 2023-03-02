@@ -24,7 +24,18 @@ controller.save = (req, res) => {
     let nombre = req.body.nombre;
     let correo = req.body.correo;
     let contraseña = req.body.contraseña;
-
+   //validations
+    if (nombre == "" || correo == "" || contraseña == "") {
+      res.render('registro', {
+        alert: true,
+        alertTitle: "Error",
+        alertMessage: "Todos los campos son obligatorios",
+        alertIcon: "error",
+        showConfirmButton: true,
+        timer: 1500,
+        ruta: 'registro'
+      });
+    }else{
     let contraseñaHash = bcrypt.hashSync(contraseña, 10);
     conn.query(`INSERT INTO registro set ?`, [{
       nombre: nombre,
@@ -33,7 +44,7 @@ controller.save = (req, res) => {
 
     }], (err, registro) => {
       console.log("Registro guardado");
-      res.render('principal');
+      res.render('login');
     });
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -61,7 +72,9 @@ controller.save = (req, res) => {
       .catch((err) => {
         console.log(err);
       });
+    }
   });
+
 };
 
 controller.principal = (req, res) => {
@@ -74,6 +87,14 @@ controller.login = (req, res) => {
 
 controller.loginya = (req, res) => {
   console.log(req.body.user);
+  //validations
+  if (req.body.user == "" || req.body.password == "") {
+    res.send(
+      "<script>alert('Todos los campos son requeridos'); window.location = '/login'</script>"
+    )
+    
+  } else {
+    
   req.getConnection((err, conn) => {
     conn.query(`SELECT * FROM registro WHERE correo = '${req.body.user}'`, (err, rows) => {
 
@@ -87,6 +108,7 @@ controller.loginya = (req, res) => {
       });
     });
   });
+}
 };
 
 controller.categorias = (req, res) => {
@@ -175,7 +197,7 @@ controller.recuperarYa = (req, res) => {
   req.getConnection((err, conn) => {
     let correo = req.body.correo;
     conn.query(`SELECT * FROM registro WHERE correo = '${req.body.correo}'`, (err, rows) => {
-
+     
       if (err) {
         res.json(err);
       } else {
